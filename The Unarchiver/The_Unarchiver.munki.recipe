@@ -1,138 +1,39 @@
-     1	<?xml version="1.0" encoding="UTF-8"?>
-     2	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-     3	<plist version="1.0">
-     4	<dict>
-     5		<key>Description</key>
-     6		<string>${Description}</string>
-     7		<key>Identifier</key>
-     8		<string>${MunkiIdentifier}</string>
-     9	
-    10		<key>Input</key>
-    11		<dict>
-    12			<key>NAME</key>
-    13			<string>${Name}</string>
-    14			<key>MUNKI_REPO_SUBDIR</key>
-    15			<string>${Category}/${Developer}/${FileName}</string>
-    16			<key>MUNKI_CATEGORY</key>
-    17			<string>${Category}</string>
-    18			<key>pkginfo</key>
-    19			<dict>
-    20				<key>catalogs</key>
-    21				<array>
-    22					<string>${Catalog}</string>
-    23				</array>
-    24				<key>category</key>
-    25				<string>%MUNKI_CATEGORY%</string>
-    26				<key>description</key>
-    27				<string>${Description}</string>
-    28				<key>developer</key>
-    29				<string>${Developer}</string>
-    30				<key>display_name</key>
-    31				<string>%NAME%</string>
-    32				<key>name</key>
-    33				<string>%NAME%</string>
-    34				<key>postinstall_script</key>
-    35				<string>#!/bin/sh
-    36	
-    37	sudo /usr/bin/osascript -e 'display dialog "
-The Unarchiver successfully installed at /Users/Shared." with title "Success!" with text buttons {"Close"} default button 1'
-exit 0
-
-</string>
-			<key>postuninstall_script</key>
-			<string>#!/bin/sh
-
-## edit if you want a post uninstall script.
-
-exit 0
-
-</string>
-			<key>unattended_install</key>
-			<${UnattendedInstall}/>
-			<key>unattended_uninstall</key>
-			<${UnattendedUninstall}/>
-		</dict>
-	</dict>
-
-	<key>MinimumVersion</key>
-	<string>${MinimumVersion}</string>
-	<key>ParentRecipe</key>
-	<string>${DownloadIdentifier}</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/${FileName}</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/${FileName}</string>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/${FileName}.dmg</string>
-			</dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%dmg_path%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
-		</dict>
-	</array>
-</dict>
-</plist>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>${Description}</string>
+	<string>The Unarchiver is a proprietary freeware data decompression utility, which supports more formats than Archive Utility (formerly known as BOMArchiveHelper), the built-in archive unpacker program in macOS.</string>
 	<key>Identifier</key>
-	<string>${MunkiIdentifier}</string>
+	<string>com.seedstore.whydah.munki.The_Unarchiver</string>
 
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>${Name}</string>
+		<string>The Unarchiver</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>${Category}/${Developer}/${FileName}</string>
+		<string>Utilities/MacPaw/The_Unarchiver</string>
 		<key>MUNKI_CATEGORY</key>
-		<string>${Category}</string>
+		<string>Utilities</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
-				<string>${Catalog}</string>
+				<string>testing</string>
 			</array>
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
-			<string>${Description}</string>
+			<string>The Unarchiver is a proprietary freeware data decompression utility, which supports more formats than Archive Utility (formerly known as BOMArchiveHelper), the built-in archive unpacker program in macOS.</string>
 			<key>developer</key>
-			<string>${Developer}</string>
+			<string>MacPaw</string>
 			<key>display_name</key>
 			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>postinstall_script</key>
 			<string>#!/bin/sh
+
 
      1	sudo /usr/bin/osascript -e 'display dialog "
 The Unarchiver successfully installed at /Users/Shared." with title "Success!" with text buttons {"Close"} default button 1'
@@ -148,16 +49,16 @@ exit 0
 
 </string>
 			<key>unattended_install</key>
-			<${UnattendedInstall}/>
+			<false/>
 			<key>unattended_uninstall</key>
-			<${UnattendedUninstall}/>
+			<false/>
 		</dict>
 	</dict>
 
 	<key>MinimumVersion</key>
-	<string>${MinimumVersion}</string>
+	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>${DownloadIdentifier}</string>
+	<string>com.seedstore.whydah.download.The_Unarchiver</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -166,7 +67,7 @@ exit 0
 				<key>archive_path</key>
 				<string>%pathname%</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/${FileName}</string>
+				<string>%RECIPE_CACHE_DIR%/The_Unarchiver</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
@@ -177,9 +78,9 @@ exit 0
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/${FileName}</string>
+				<string>%RECIPE_CACHE_DIR%/The_Unarchiver</string>
 				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/${FileName}.dmg</string>
+				<string>%RECIPE_CACHE_DIR%/The_Unarchiver.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
@@ -198,3 +99,4 @@ exit 0
 	</array>
 </dict>
 </plist>
+
