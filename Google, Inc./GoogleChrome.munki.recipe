@@ -61,12 +61,13 @@ exit 0
 	<key>ParentRecipe</key>
 	<string>com.seedstore.whydah.download.GoogleChrome</string>
 	<key>Process</key>
+
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
-				<string>%pathname%</string>
+				<string>%dmg_path%</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/GoogleChrome</string>
 				<key>purge_destination</key>
@@ -75,6 +76,7 @@ exit 0
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -86,6 +88,7 @@ exit 0
 			<key>Processor</key>
 			<string>DmgCreator</string>
 		</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -97,6 +100,7 @@ exit 0
 			<key>Processor</key>
 			<string>MunkiImporter</string>
 		</dict>
+
 	</array>
 </dict>
 </plist>
