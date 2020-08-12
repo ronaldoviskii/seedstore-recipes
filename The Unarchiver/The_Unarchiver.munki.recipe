@@ -25,6 +25,8 @@
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
 			<string>The Unarchiver is a proprietary freeware data decompression utility, which supports more formats than Archive Utility (formerly known as BOMArchiveHelper), the built-in archive unpacker program in macOS.</string>
+			<key>icon</key>
+			<string>The_Unarchiver.png</string>
 			<key>developer</key>
 			<string>MacPaw</string>
 			<key>display_name</key>
