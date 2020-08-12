@@ -24,6 +24,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
 			<string>A free web browser developed by Google from the open source &lt;a href='//alternativeto.net/software/chromium/'&gt;Chromium&lt;/a&gt; project with a focus on speed and minimalism.</string>
 			<key>developer</key>
@@ -33,6 +35,8 @@
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
+			<false/>
+			<key>unattended_uninstall</key>
 			<false/>
 		</dict>
 	</dict>
