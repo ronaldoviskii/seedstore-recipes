@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>${Description}</string>
+	<key>Identifier</key>
+	<string>${MunkiIdentifier}</string>
+
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>${Name}</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>${Category}/${Developer}/${FileName}</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>${Category}</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>${Catalog}</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>${Description}</string>
+			<key>developer</key>
+			<string>${Developer}</string>
+			<key>display_name</key>
+			<string>%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/sh
+
+curUser=$(/usr/bin/stat -f%Su /dev/console)
+
+sudo /usr/bin/osascript -e 'display dialog "App successfully installed at /Users/Shared." with title "Success!" with text buttons {"Close"} default button 1 '
+
+exit 0
+
+</string>
+			<key>postuninstall_script</key>
+			<string>#!/bin/sh
+
+## edit if you want a post uninstall script.
+
+exit 0
+
+</string>
+			<key>unattended_install</key>
+			<${UnattendedInstall}/>
+			<key>unattended_uninstall</key>
+			<${UnattendedUninstall}/>
+		</dict>
+	</dict>
+
+	<key>MinimumVersion</key>
+	<string>${MinimumVersion}</string>
+	<key>ParentRecipe</key>
+	<string>${DownloadIdentifier}</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/${FileName}</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/${FileName}</string>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/${FileName}.dmg</string>
+			</dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%dmg_path%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
