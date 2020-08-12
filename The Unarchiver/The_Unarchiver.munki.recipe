@@ -34,9 +34,8 @@
 			<key>postinstall_script</key>
 			<string>#!/bin/sh
 
+## edit if you want a post install script.
 
-     1	sudo /usr/bin/osascript -e 'display dialog "
-The Unarchiver successfully installed at /Users/Shared." with title "Success!" with text buttons {"Close"} default button 1'
 exit 0
 
 </string>
