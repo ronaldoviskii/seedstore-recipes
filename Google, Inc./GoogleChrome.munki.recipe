@@ -69,7 +69,7 @@ exit 0
 			<dict>
 				<key>dmg_root</key>
 				<string>%RECIPE_CACHE_DIR%/GoogleChrome</string>
-				<key>pathname</key>
+				<key>dmg_path</key>
 				<string>%RECIPE_CACHE_DIR%/GoogleChrome.dmg</string>
 			</dict>
 			<key>Processor</key>
@@ -80,7 +80,7 @@ exit 0
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
-				<string>%pathname%</string>
+				<string>%dmg_path%</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/GoogleChrome</string>
 				<key>purge_destination</key>
@@ -94,13 +94,13 @@ exit 0
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%pathname%</string>
+				<string>%dmg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
-			
+
 		</dict>
 	</array>
 </dict>
