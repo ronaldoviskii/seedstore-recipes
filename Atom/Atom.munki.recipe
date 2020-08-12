@@ -3,15 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Atom and imports into Munki.</string>
+	<string>A hackable text editor for the 21st Century.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.download.Atom</string>
+	<string>com.seedstore.whydah.munki.Atom</string>
+
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Atom</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Coding/Atom</string>
+		<string>Coding/GitHub/Atom</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Coding</string>
 		<key>pkginfo</key>
@@ -23,11 +24,13 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
-			<string>A hackable text editor for the 21st Century</string>
+			<string>A hackable text editor for the 21st Century.</string>
+			<key>icon_name</key>
+			<string>Atom.png</string>
 			<key>developer</key>
-			<string>GitHub, Inc.</string>
+			<string>GitHub</string>
 			<key>display_name</key>
-			<string>Atom</string>
+			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>postinstall_script</key>
@@ -79,6 +82,7 @@ else
 fi
 
 exit 0
+
 </string>
 			<key>unattended_install</key>
 			<false/>
@@ -86,6 +90,7 @@ exit 0
 			<false/>
 		</dict>
 	</dict>
+
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
@@ -93,17 +98,28 @@ exit 0
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_megabytes</key>
-				<string>1000</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/Atom</string>
+				<key>purge_destination</key>
+				<true/>
 			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/Atom</string>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/Atom.dmg</string>
+			</dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -119,3 +135,4 @@ exit 0
 	</array>
 </dict>
 </plist>
+

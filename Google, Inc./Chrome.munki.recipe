@@ -2,22 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Chrome and imports it into Munki.</string>
+	<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
 	<key>Identifier</key>
 	<string>com.seedstore.whydah.munki.Chrome</string>
+
 	<key>Input</key>
 	<dict>
-		<key>APP_FILENAME</key>
-		<string>Google Chrome</string>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Internet/Chrome</string>
-		<key>MUNKI_CATEGORY</key>
-		<string>Internet</string>
 		<key>NAME</key>
 		<string>Chrome</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Internet/Google, Inc/Chrome</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Internet</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -27,21 +24,40 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
-			<string>A free web browser developed by Google from the open source &lt;a href='//alternativeto.net/software/chromium/'&gt;Chromium&lt;/a&gt; project with a focus on speed and minimalism.</string>
+			<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
+			<key>icon_name</key>
+			<string>Chrome.png</string>
 			<key>developer</key>
-			<string>Google, Inc.</string>
+			<string>Google, Inc</string>
 			<key>display_name</key>
-			<string>Chrome</string>
+			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/sh
+
+## edit if you want a post install script.
+
+exit 0
+
+</string>
+			<key>postuninstall_script</key>
+			<string>#!/bin/sh
+
+## edit if you want a post uninstall script.
+
+exit 0
+
+</string>
 			<key>unattended_install</key>
 			<false/>
 			<key>unattended_uninstall</key>
 			<false/>
 		</dict>
 	</dict>
+
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>0.2.0</string>
 	<key>ParentRecipe</key>
 	<string>com.seedstore.whydah.download.Chrome</string>
 	<key>Process</key>
@@ -49,24 +65,34 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>additional_pkginfo</key>
-				<dict>
-					<key>version</key>
-					<string>%version%</string>
-				</dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/Chrome</string>
+				<key>purge_destination</key>
+				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>MunkiPkginfoMerger</string>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/Chrome</string>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/Chrome.dmg</string>
+			</dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%pathname%</string>
+				<string>%dmg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
-				<key>version_comparison_key</key>
-				<string>CFBundleVersion</string>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
@@ -74,3 +100,4 @@
 	</array>
 </dict>
 </plist>
+

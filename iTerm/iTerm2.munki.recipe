@@ -25,6 +25,8 @@
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
 			<string>iTerm2 is a replacement for Terminal and the successor to iTerm. It works on Macs with OS 10.5 (Leopard) or newer. Its focus is on performance, internationalization, and supporting innovative features that make your life better.</string>
+			<key>icon_name</key>
+			<string>iTerm2.png</string>
 			<key>developer</key>
 			<string>George Nachman</string>
 			<key>display_name</key>
@@ -34,9 +36,7 @@
 			<key>postinstall_script</key>
 			<string>#!/bin/sh
 
-curUser=alvim
-
-sudo launchctl asuser alvim /usr/bin/osascript -e 'Tell current application to display dialog iTerm2 has been successfully installed. with title Success! with text buttons {OK} default button OK'
+## edit if you want a post install script.
 
 exit 0
 
@@ -100,3 +100,4 @@ exit 0
 	</array>
 </dict>
 </plist>
+

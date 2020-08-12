@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>The Unarchiver is a proprietary freeware data decompression utility, which supports more formats than Archive Utility (formerly known as BOMArchiveHelper), the built-in archive unpacker program in macOS.</string>
+	<string>The Unarchiver is the only app you need to open RAR on Mac. It’s times more powerful than the native macOS utility and supports infinitely more archive formats.</string>
 	<key>Identifier</key>
 	<string>com.seedstore.whydah.munki.The_Unarchiver</string>
 
@@ -24,8 +24,8 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
-			<string>The Unarchiver is a proprietary freeware data decompression utility, which supports more formats than Archive Utility (formerly known as BOMArchiveHelper), the built-in archive unpacker program in macOS.</string>
-			<key>icon</key>
+			<string>The Unarchiver is the only app you need to open RAR on Mac. It’s times more powerful than the native macOS utility and supports infinitely more archive formats.</string>
+			<key>icon_name</key>
 			<string>The_Unarchiver.png</string>
 			<key>developer</key>
 			<string>MacPaw</string>
