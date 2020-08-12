@@ -81,7 +81,7 @@ exit 0
 				<key>dmg_root</key>
 				<string>%RECIPE_CACHE_DIR%/GoogleChrome</string>
 				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%GoogleChrome.dmg</string>
+				<string>%RECIPE_CACHE_DIR%/GoogleChrome.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
