@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Atom and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.download.Atom</string>
+	<string>com.seedstore.whydah.munki.Atom</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
