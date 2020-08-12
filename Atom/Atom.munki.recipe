@@ -3,16 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Visual Studio Code and imports into Munki.</string>
+	<string>Downloads the current release version of Atom and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.munki.VisualStudioCode</string>
-
+	<string>com.seedstore.whydah.download.Atom</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Visual_Studio_Code</string>
+		<string>Atom</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Coding/Visual_Studio_Code</string>
+		<string>Coding/Atom</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Coding</string>
 		<key>pkginfo</key>
@@ -24,31 +23,60 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
-			<string>Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.</string>
+			<string>A hackable text editor for the 21st Century</string>
 			<key>developer</key>
 			<string>GitHub, Inc.</string>
 			<key>display_name</key>
-			<string>Visual Studio Code</string>
+			<string>Atom</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>postinstall_script</key>
 			<string>#!/bin/sh
 
-curUser=$(/usr/bin/stat -f%Su /dev/console)
+# Simulate the "Atom -&gt; Install Shell Commands"
 
-sudo launchctl asuser $curUser /usr/bin/osascript -e 'Tell current application to display dialog "Visual Studio Code has been successfullu installed." with title "Success!" with text buttons {"OK"} default button "OK"'
+# /usr/local/bin/atom
+ATOM_SOURCE="/Applications/Atom.app/Contents/Resources/app/atom.sh"
+ATOM_TARGET="/usr/local/bin/atom"
+if [[ -f "${ATOM_SOURCE}" ]]; then
+    echo "Creating symbolic link ${ATOM_SOURCE} -&gt; ${ATOM_TARGET}"
+    /bin/ln -s "${ATOM_SOURCE}" "${ATOM_TARGET}"
+else
+    echo "${ATOM_SOURCE} doesn't exist..."
+fi
+
+# /usr/local/bin/apm
+APM_SOURCE="/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm"
+APM_TARGET="/usr/local/bin/apm"
+if [[ -f "${APM_SOURCE}" ]]; then
+    echo "Creating symbolic link ${APM_SOURCE} -&gt; ${APM_TARGET}"
+    /bin/ln -s "${APM_SOURCE}" "${APM_TARGET}"
+else
+    echo "${APM_SOURCE} doesn't exist..."
+fi
 
 exit 0
-
 </string>
 			<key>postuninstall_script</key>
 			<string>#!/bin/sh
 
-sudo rm -rf $HOME/Library/Application\ Support/Code
-sudo rm -rf $HOME/Library/Application\ Support/Code\ -\ Insiders/
-sudo rm -rf $HOME/.vscode
-sudo rm -rf $HOME/.vscode-insiders/
-sudo rm -rf /Applications/Visual\ Studio\ Code.app/
+# /usr/local/bin/atom
+ATOM="/usr/local/bin/atom"
+if [[ -L "${ATOM}" ]]; then
+    echo "Removing ${ATOM}"
+    /bin/rm -f "${ATOM}"
+else
+    echo "${ATOM} doesn't exist..."
+fi
+
+# /usr/local/bin/apm
+APM="/usr/local/bin/apm"
+if [[ -L "${APM}" ]]; then
+    echo "Removing ${APM}"
+    /bin/rm -f "${APM}"
+else
+    echo "${APM} doesn't exist..."
+fi
 
 exit 0
 </string>
@@ -58,36 +86,24 @@ exit 0
 			<false/>
 		</dict>
 	</dict>
-
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.seedstore.whydah.download.VisualStudioCode</string>
+	<string>com.seedstore.whydah.download.Atom</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
+			<string>DmgCreator</string>
 			<key>Arguments</key>
 			<dict>
+				<key>dmg_megabytes</key>
+				<string>1000</string>
 				<key>dmg_root</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>dmg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
 			</dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
