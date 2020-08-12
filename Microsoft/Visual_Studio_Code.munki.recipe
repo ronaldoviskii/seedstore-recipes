@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Visual Studio Code and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.munki.VisualStudioCode</string>
+	<string>com.seedstore.whydah.munki.Visual_Studio_Code</string>
 
 	<key>Input</key>
 	<dict>
@@ -62,7 +62,7 @@ exit 0
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.seedstore.whydah.download.VisualStudioCode</string>
+	<string>com.seedstore.whydah.download.Visual_Studio_Code</string>
 	<key>Process</key>
 	<array>
 		<dict>
