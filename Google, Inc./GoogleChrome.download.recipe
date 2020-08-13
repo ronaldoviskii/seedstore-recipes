@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Downloads latest Google Chrome disk image.</string>
     <key>Identifier</key>
-    <string>com.seedstore.whydah.download.GoogleChrome</string>
+    <string>com.seedstore.whydah.download.Google_Chrome</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>GoogleChrome</string>
+        <string>Google Chrome</string>
         <key>DOWNLOAD_URL</key>
         <string>https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg</string>
     </dict>

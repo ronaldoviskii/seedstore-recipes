@@ -5,14 +5,14 @@
 	<key>Description</key>
 	<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.munki.GoogleChrome</string>
+	<string>com.seedstore.whydah.munki.Google_Chrome</string>
 
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>GoogleChrome</string>
+		<string>Google Chrome</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Internet/Google/GoogleChrome</string>
+		<string>Internet/Google/Google_Chrome</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Internet</string>
 		<key>pkginfo</key>
@@ -26,7 +26,7 @@
 			<key>description</key>
 			<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
 			<key>icon_name</key>
-			<string>GoogleChrome.png</string>
+			<string>Google_Chrome.png</string>
 			<key>developer</key>
 			<string>Google, Inc</string>
 			<key>display_name</key>
@@ -59,7 +59,7 @@ exit 0
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.seedstore.whydah.download.GoogleChrome</string>
+	<string>com.seedstore.whydah.download.Google_Chrome</string>
 	<key>Process</key>
 	<array>
 			<dict>
