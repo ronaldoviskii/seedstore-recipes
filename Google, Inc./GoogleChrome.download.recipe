@@ -3,55 +3,47 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Google Chrome disk image and imports into Munki.</string>
+    <string>Downloads latest Google Chrome disk image.</string>
     <key>Identifier</key>
-    <string>com.seedstore.whydah.munki.GoogleChrome</string>
+    <string>com.seedstore.whydah.download.GoogleChrome</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>GoogleChrome</string>
-        <key>MUNKI_REPO_SUBDIR</key>
-        <string>Internet/Google</string>
-        <key>pkginfo</key>
-        <dict>
-            <key>catalogs</key>
-            <array>
-                <string>testing</string>
-            </array>
-            <key>description</key>
-            <string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
-			<key>display_name</key>
-			<key>category</key>
-			<string>Internet</string>
-			<key>developer</key>
-			<string>Google</string>
-            <string>Google Chrome</string>
-            <key>name</key>
-			<string>%NAME%</string>
-			<key>icon_name</key>
-			<string>GoogleChrome.png</string>
-            <key>unattended_install</key>
-			<false/>
-			<key>unattended_uninstall</key>
-            <false/>
-        </dict>
+        <key>DOWNLOAD_URL</key>
+        <string>https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
-    <key>ParentRecipe</key>
-    <string>com.seedstore.whydah.download.GoogleChrome</string>
     <key>Process</key>
     <array>
         <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-                <key>pkg_path</key>
-                <string>%pathname%</string>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>url</key>
+                <string>%DOWNLOAD_URL%</string>
+                <key>filename</key>
+                <string>%NAME%.dmg</string>
             </dict>
+        </dict>
+        <dict>
             <key>Processor</key>
-            <string>MunkiImporter</string>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/Google Chrome.app</string>
+                <key>strict_verification</key>
+                <false/>
+                <key>requirement</key>
+                <string>(identifier "com.google.Chrome" or identifier "com.google.Chrome.beta" or identifier "com.google.Chrome.dev" or identifier "com.google.Chrome.canary") and (certificate leaf = H"85cee8254216185620ddc8851c7a9fc4dfe120ef" or certificate leaf = H"c9a99324ca3fcb23dbcc36bd5fd4f9753305130a")</string>
+            </dict>
         </dict>
     </array>
 </dict>
