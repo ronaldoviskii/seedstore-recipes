@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest Google Chrome disk image and imports into Munki.</string>
     <key>Identifier</key>
-    <string>com.seedstore.whydah.munki.google-chrome</string>
+    <string>com.seedstore.whydah.munki.GoogleChrome</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
