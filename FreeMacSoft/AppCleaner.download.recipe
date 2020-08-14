@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release of AppCleaner from freemacsoft website.</string>
     <key>Identifier</key>
-    <string>com.seedstore.whydah.AppCleaner.download</string>
+    <string>com.seedstore.whydah.download.AppCleaner</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
