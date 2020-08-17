@@ -34,10 +34,6 @@
 			<false/>
 			<key>unattended_uninstall</key>
 			<false/>
-			<key>postinstall_script</key>
-			<string>
-			#!/bin/sh
-			</string>
 		</dict>
 	</dict>
 		<key>MinimumVersion</key>
