@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Description</key>
-	<string>O aplicativo do Itaú oferece um acesso seguro e prático para fazer a gestão da sua conta, ele dispensa o uso do Guardião 30 horas e você pode acessar sua conta física e jurídica. Seu atalho para um banco ainda mais seguro.</string>
 	<key>Identifier</key>
 	<string>com.seedstore.whydah.munki.Itau</string>
 	<key>Input</key>
@@ -18,6 +16,9 @@
 		<string>Itau</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>blocking_applications</key>
+			<array>
+			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
