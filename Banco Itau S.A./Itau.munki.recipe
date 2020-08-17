@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>Utilities/Banco Itau S.A./%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
-		<string>Entertainment</string>
+		<string>Utilities</string>
 		<key>NAME</key>
 		<string>Itau</string>
 		<key>pkginfo</key>
