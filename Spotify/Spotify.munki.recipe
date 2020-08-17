@@ -5,13 +5,13 @@
 	<key>Description</key>
   <string>Spotify is a music streaming service offering unlimited streaming of selected music from a range of major and independent record labels.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.munki.Itau</string>
+	<string>com.seedstore.whydah.munki.Spotify</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>Itau</string>
+		<string>Spotify</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Entertainment/Banco Itau S.A./%NAME%</string>
+		<string>Entertainment/Spotify AB/%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Entertainment</string>
 		<key>NAME</key>
@@ -29,14 +29,14 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>icon_name</key>
-			<string>Itau.png</string>
+			<string>Spotify.png</string>
 			<key>display_name</key>
-			<string>Itau</string>
+			<string>Spotify</string>
 			<key>name</key>
 			<string>%NAME%</string>
       <key>postinstall_script</key>
       <string>#!/bin/bash
-          /bin/chmod -R go+rX /Applications/Itau.app
+          /bin/chmod -R go+rX /Applications/Spotify.app
 			</string>
 			<key>unattended_install</key>
 			<false/>
