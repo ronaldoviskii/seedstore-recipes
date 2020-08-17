@@ -10,7 +10,7 @@
         <key>NAME</key>
         <string>Spotify</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>Entertainment/Spotify AB/Spotify</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -27,8 +27,6 @@
       			<string>Spotify.png</string>
       			<key>developer</key>
       			<string>Spotify</string>
-            <key>MUNKI_REPO_SUBDIR</key>
-            <string>Entertainment/Spotify</string>
             <key>postinstall_script</key>
             <string>#!/bin/bash
                 /bin/chmod -R go+rX /Applications/Spotify.app
