@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Aplicativo Itau.</string>
+    <string>Download the latest version of Aplicativo Itau.</string>
     <key>Identifier</key>
     <string>com.seedstore.whydah.download.AppItau</string>
     <key>Input</key>
@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Itau</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://download.scdn.co/Spotify.dmg</string>
+        <string>https://guardiao.itau.com.br/UpdateServer/aplicativoitau.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>

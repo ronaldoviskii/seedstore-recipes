@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of aplicativoitau and imports it into Munki.</string>
+	<string>Download the latest version of aplicativoitau and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.seedstore.whydah.munki.AppItau</string>
 	<key>Input</key>
@@ -38,10 +38,10 @@
 			<false/>
 			<key>unattended_uninstall</key>
 			<false/>
-		</dict>
-	</dict>
-	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+			</dict>
+			</dict>
+			<key>MinimumVersion</key>
+			<string>1.0.0</string>
 	<key>ParentRecipe</key>
 	<string>com.seedstore.whydah.download.AppItau</string>
 	<key>Process</key>
