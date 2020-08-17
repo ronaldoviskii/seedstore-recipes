@@ -36,42 +36,42 @@
 			<false/>
 		</dict>
 	</dict>
-	<key>MinimumVersion</key>
-	<string>1.1</string>
-	<key>ParentRecipe</key>
-	<string>com.seedstore.whydah.download.Zoomus</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
+		<key>MinimumVersion</key>
+		<string>1.1</string>
+		<key>ParentRecipe</key>
+		<string>com.github.homebysix.pkg.Zoom</string>
+		<key>Process</key>
+		<array>
 			<dict>
-				<key>faux_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>installs_item_paths</key>
-				<array>
-					<string>/Applications/Zoom.us.app</string>
-				</array>
-				<key>version_comparison_key</key>
-				<string>CFBundleVersion</string>
+				<key>Arguments</key>
+				<dict>
+					<key>faux_root</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+					<key>installs_item_paths</key>
+					<array>
+						<string>/Applications/zoom.us.app</string>
+					</array>
+					<key>version_comparison_key</key>
+					<string>CFBundleVersion</string>
+				</dict>
+				<key>Processor</key>
+				<string>MunkiInstallsItemsCreator</string>
 			</dict>
-			<key>Processor</key>
-			<string>MunkiInstallsItemsCreator</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>MunkiPkginfoMerger</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
 			<dict>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-				<key>version_comparison_key</key>
-				<string>CFBundleVersion</string>
+				<key>Processor</key>
+				<string>MunkiPkginfoMerger</string>
 			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
-		</dict>
-	</array>
-</dict>
-</plist>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>repo_subdirectory</key>
+					<string>%MUNKI_REPO_SUBDIR%</string>
+					<key>version_comparison_key</key>
+					<string>CFBundleVersion</string>
+				</dict>
+				<key>Processor</key>
+				<string>MunkiImporter</string>
+			</dict>
+		</array>
+	</dict>
+	</plist>
