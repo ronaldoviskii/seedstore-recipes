@@ -25,7 +25,7 @@
 			<key>description</key>
 			<string>O aplicativo oferece um acesso seguro e prático para fazer a gestão da sua conta, ele dispensa o uso do Guardião 30 horas e você pode acessar sua conta física e jurídica. Seu atalho para um banco ainda mais seguro.</string>
 			<key>icon_name</key>
-			<string>Acrobat Reader.png</string>
+			<string>Itau.png</string>
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>developer</key>
