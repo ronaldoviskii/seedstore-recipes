@@ -29,7 +29,7 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>icon_name</key>
-			<string>Spotify.png</string>
+			<string>Itau.png</string>
 			<key>display_name</key>
 			<string>Itau</string>
 			<key>name</key>
