@@ -23,14 +23,16 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>O aplicativo oferece um acesso seguro e prático para fazer a gestão da sua conta, ele dispensa o uso do Guardião 30 horas e você pode acessar sua conta física e jurídica. Seu atalho para um banco ainda mais seguro.</string>
+			<key>icon_name</key>
+			<string>Acrobat Reader.png</string>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
 			<key>developer</key>
 			<string>Banco Itau S.A.</string>
 			<key>display_name</key>
 			<string>Itau</string>
 			<key>name</key>
-			<key>icon_name</key>
-			<string>Itau.png</string>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<false/>
