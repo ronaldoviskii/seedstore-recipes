@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Download the latest version of Aplicativo Itau.</string>
+    <string>Downloads the latest Aplicativo Itau.</string>
     <key>Identifier</key>
-    <string>com.seedstore.whydah.download.AppItau</string>
+    <string>com.seedstore.whydah.download.Itau</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Itau</string>
+        <string>Spotify</string>
         <key>DOWNLOAD_URL</key>
         <string>https://guardiao.itau.com.br/UpdateServer/aplicativoitau.dmg</string>
     </dict>
@@ -38,8 +38,8 @@
             <key>Arguments</key>
             <dict>
                 <key>input_path</key>
-                <string>%pathname%/Itau.app</string>
-								<key>requirement</key>
+                <string>%pathname%/Spotify.app</string>
+                <key>requirement</key>
 								<string>identifier "br.com.itau.aplicativoitau" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = FWR8CJ7249</string>
 						</dict>
         </dict>
