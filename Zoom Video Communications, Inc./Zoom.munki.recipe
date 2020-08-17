@@ -39,7 +39,7 @@
 		<key>MinimumVersion</key>
 		<string>1.1</string>
 		<key>ParentRecipe</key>
-		<string>com.github.homebysix.pkg.Zoom</string>
+		<string>com.seedstore.whydah.pkg.Zoomus</string>
 		<key>Process</key>
 		<array>
 			<dict>
