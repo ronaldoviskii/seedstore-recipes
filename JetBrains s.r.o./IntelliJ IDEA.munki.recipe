@@ -11,7 +11,7 @@
 		<key>APP_FILENAME</key>
 		<string>IntelliJ IDEA CE</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Coding/%NAME%</string>
+		<string>Coding/JetBrains s.r.o./%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Coding</string>
 		<key>NAME</key>

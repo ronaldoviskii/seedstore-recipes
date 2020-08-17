@@ -11,7 +11,7 @@
     <key>NAME</key>
     <string>PyCharm CE</string>
     <key>MUNKI_REPO_SUBDIR</key>
-    <string>Coding/PyCharm</string>
+    <string>Coding/JetBrains s.r.o./PyCharm</string>
     <key>MUNKI_CATEGORY</key>
     <string>Coding</string>
     <key>pkginfo</key>
