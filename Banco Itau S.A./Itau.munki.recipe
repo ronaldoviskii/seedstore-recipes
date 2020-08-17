@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>O aplicativo oferece um acesso seguro e prático para fazer a gestão da sua conta, ele dispensa o uso do Guardião 30 horas e você pode acessar sua conta física e jurídica. Seu atalho para um banco ainda mais seguro.</string>
+	<string>O aplicativo do Itaú oferece um acesso seguro e prático para fazer a gestão da sua conta, ele dispensa o uso do Guardião 30 horas e você pode acessar sua conta física e jurídica. Seu atalho para um banco ainda mais seguro.</string>
 	<key>Identifier</key>
 	<string>com.seedstore.whydah.munki.Itau</string>
 	<key>Input</key>
