@@ -15,7 +15,7 @@
 		<key>MUNKI_CATEGORY</key>
 		<string>Entertainment</string>
 		<key>NAME</key>
-		<string>Spotify</string>
+		<string>Itau</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
