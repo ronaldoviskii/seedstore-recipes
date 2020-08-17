@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of aplicativoitau.</string>
+	<string>Download the latest version of aplicativoitau.</string>
 	<key>Identifier</key>
 	<string>com.seedstore.whydah.download.AppItau</string>
 	<key>Input</key>
