@@ -29,7 +29,6 @@ See the following URLs for more info:
         <array>
             <string>testing</string>
         </array>
-        <key>description</key>
             <key>description</key>
             <string>Mozilla Firefox is a free and open source web browser.</string>
             <key>developer</key>
@@ -46,7 +45,7 @@ See the following URLs for more info:
       			<false/>
       			<key>unattended_uninstall</key>
       			<false/>
-      		</dict>
+      	</dict>
     </dict>
     <key>MinimumVersion</key>
     <string>2.0</string>
