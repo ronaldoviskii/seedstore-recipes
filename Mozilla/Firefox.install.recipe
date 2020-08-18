@@ -23,7 +23,7 @@ See the following URLs for more info:
     <key>MinimumVersion</key>
     <string>2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.firefox-rc-en_US</string>
+    <string>com.seedstore.whydah.download.Firefox</string>
     <key>Process</key>
     <array>
         <dict>
