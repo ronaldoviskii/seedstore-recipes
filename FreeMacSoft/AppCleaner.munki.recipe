@@ -32,14 +32,12 @@
 			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
-</string>
 			<key>unattended_install</key>
 			<false/>
 			<key>unattended_uninstall</key>
 			<false/>
 		</dict>
 	</dict>
-
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
