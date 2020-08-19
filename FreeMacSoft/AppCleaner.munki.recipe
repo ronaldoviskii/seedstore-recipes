@@ -6,7 +6,6 @@
 	<string>AppCleaner is a small application which allows you to thoroughly uninstall unwanted apps.</string>
 	<key>Identifier</key>
 	<string>com.seedstore.whydah.munki.AppCleaner</string>
-
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -33,21 +32,6 @@
 			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
-			<key>postinstall_script</key>
-			<string>#!/bin/sh
-
-## edit if you want a post install script.
-
-exit 0
-
-</string>
-			<key>postuninstall_script</key>
-			<string>#!/bin/sh
-
-## edit if you want a post uninstall script.
-
-exit 0
-
 </string>
 			<key>unattended_install</key>
 			<false/>
@@ -62,19 +46,6 @@ exit 0
 	<string>com.seedstore.whydah.download.AppCleaner</string>
 	<key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-            <key>Arguments</key>
-            <dict>
-                <key>archive_path</key>
-                <string>%pathname%</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-                <key>purge_destination</key>
-                <true/>
-            </dict>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>DmgCreator</string>
