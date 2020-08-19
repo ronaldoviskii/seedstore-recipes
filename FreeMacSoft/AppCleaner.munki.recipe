@@ -29,7 +29,7 @@
 				<key>icon_name</key>
         <string>AppCleaner.png</string>
 				<key>category</key>
-        <string>%MUNKI_REPO_SUBDIR%</string>
+        <string>Utilities</string>
         <key>unattended_install</key>
         <false/>
         <key>unattended_uninstall</key>
