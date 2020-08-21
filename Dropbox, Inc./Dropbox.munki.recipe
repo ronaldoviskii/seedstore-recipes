@@ -26,8 +26,16 @@
             <string>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere. This means that any file you save to your Dropbox will automatically save to all your computers, phones and even the Dropbox website.</string>
             <key>display_name</key>
             <string>Dropbox</string>
+            <key>icon_name</key>
+            <string>Dropbox.png</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>unattended_install</key>
+            <false/>
+            <key>category</key>
+            <string>%MUNKI_CATEGORY%</string>
+            <key>developer</key>
+            <string>Dropbox, Inc</string>
             <key>postinstall_script</key>
             <string>#!/bin/sh
 # based on Ruby postinstall script by Riley Shott:
