@@ -5,7 +5,7 @@
     <key>Description</key>
     <string></string>
     <key>Identifier</key>
-    <string>com.github.autopkg.munki.dropbox</string>
+    <string>com.seedstore.whydah.munki.dropbox</string>
     <key>Input</key>
     <dict>
         <key>APP_FILENAME</key>
