@@ -30,8 +30,6 @@
             <string>Dropbox.png</string>
             <key>name</key>
             <string>%NAME%</string>
-            <key>unattended_install</key>
-            <false/>
             <key>category</key>
             <string>%MUNKI_CATEGORY%</string>
             <key>developer</key>
@@ -60,7 +58,7 @@ else
 fi
 </string>
             <key>unattended_install</key>
-            <true/>
+            <false/>
         </dict>
     </dict>
     <key>MinimumVersion</key>
