@@ -28,6 +28,8 @@
 
     <key>description</key>
     <string>Slack is a platform for team communication: everything in one place, instantly searchable, available wherever you go.</string>
+    <key>developer</key>
+    <string>%MUNKI_DEVELOPER%</string>
     <key>category</key>
     <string>%MUNKI_CATEGORY%</string>
     <key>icon_name</key>
