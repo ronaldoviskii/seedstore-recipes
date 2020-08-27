@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Telegram.</string>
+    <string>Downloads the latest version of Telegram.</string>
     <key>Identifier</key>
     <string>com.seedstore.whydah.download.Telegram</string>
     <key>Input</key>

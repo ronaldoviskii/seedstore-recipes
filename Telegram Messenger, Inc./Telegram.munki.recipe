@@ -45,7 +45,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.pkg.Telegram</string>
+	<string>com.seedstore.whydah.download.Telegram</string>
 	<key>Process</key>
 	<array>
 		<dict>
