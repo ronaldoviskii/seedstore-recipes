@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Spotify</string>
+        <string>Telegram</string>
         <key>DOWNLOAD_URL</key>
 		<string>https://osx.telegram.org/updates/Telegram.dmg</string>
 	</dict>
