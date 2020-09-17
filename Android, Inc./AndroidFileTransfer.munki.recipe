@@ -27,12 +27,18 @@
             </array>
             <key>description</key>
             <string>Transfer files from Android to Mac via USB.</string>
-            <key>display_name</key>
-            <string>Android File Transfer</string>
-            <key>name</key>
-            <string>%NAME%</string>
-            <key>unattended_install</key>
-            <true/>
+            <key>developer</key>
+      			<string>%MUNKI_DEVELOPER%</string>
+      			<key>category</key>
+      			<string>%MUNKI_CATEGORY%</string>
+      			<key>icon_name</key>
+      			<string>AndroidFileTransfer.png</string>
+      			<key>display_name</key>
+      			<string>WhatsApp</string>
+      			<key>name</key>
+      			<string>%NAME%</string>
+      			<key>unattended_install</key>
+      			<false/>
         </dict>
     </dict>
     <key>MinimumVersion</key>
