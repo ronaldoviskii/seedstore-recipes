@@ -5,15 +5,13 @@
 	<key>Description</key>
 	<string>Downloads latest Slack.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.download.Slack</string>
+	<string>com.macsolution.seedstore.download.slack</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Slack</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://slack.com/ssb/download-osx</string>
-		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-		<false/>
+		<string>https://slack.com/ssb/download-osx-universal</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
