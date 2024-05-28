@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
 	<key>Identifier</key>
-	<string>com.macsolution.seedstore.munki.Google_Chrome</string>
+	<string>com.macsolution.seedstore.munki.GoogleChrome</string>
 
 	<key>Input</key>
 	<dict>
@@ -59,7 +59,7 @@ exit 0
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.macsolution.seedstore.download.Google_Chrome</string>
+	<string>com.macsolution.seedstore.download.GoogleChrome</string>
 	<key>Process</key>
 	<array>
 			<dict>
