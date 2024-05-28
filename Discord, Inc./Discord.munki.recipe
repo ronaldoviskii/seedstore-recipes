@@ -6,7 +6,7 @@
     <key>Description</key>
     <string>Download the latest version of Discord and imports it into Munki.</string>
     <key>Identifier</key>
-    <string>com.seedstore.whydah.munki.Discord</string>
+    <string>com.macsolution.seedstore.munki.Discord</string>
     <key>Input</key>
     <dict>
       <key>APP_FILENAME</key>
@@ -46,7 +46,7 @@
     <key>MinimumVersion</key>
     <string>0.3.0</string>
     <key>ParentRecipe</key>
-    <string>com.seedstore.whydah.download.Discord</string>
+    <string>com.macsolution.seedstore.download.Discord</string>
 
     <key>Process</key>
     <array>

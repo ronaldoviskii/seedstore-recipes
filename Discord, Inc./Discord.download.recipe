@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest verison of Discord</string>
     <key>Identifier</key>
-    <string>com.seedstore.whydah.download.Discord</string>
+    <string>com.macsolution.seedstore.download.Discord</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
