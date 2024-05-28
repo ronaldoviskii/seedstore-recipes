@@ -5,7 +5,7 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Install Spotify and imports it into Munki.</string>
+	<string>Downloads the latest version of Spotify and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.macsolution.seedstore.munki.InstallSpotify</string>
 	<key>Input</key>
@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Install Spotify</string>
+		<string>Spotify</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -25,7 +25,7 @@
 			<key>developer</key>
 			<string>Spotify</string>
 			<key>display_name</key>
-			<string>Install Spotify</string>
+			<string>Spotify</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
