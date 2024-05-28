@@ -18,7 +18,7 @@
       <key>NAME</key>
       <string>Discord</string>
       <key>MUNKI_REPO_SUBDIR</key>
-      <string>%MUNKI_CATEGORY%/%MUNKI_DEVELOPER%/%NAME%</string>
+      <string>apps/%NAME%</string>
 
       <key>pkginfo</key>
       <dict>
@@ -27,7 +27,7 @@
           <string>testing</string>
         </array>
         <key>description</key>
-        <string>Discord is a freeware proprietary VoIP application designed for gaming communities. Discord runs on Microsoft Windows, macOS, Android, iOS, Linux, and in a web browser. In December 2016, the developers announced that Discord had over 25 million users.</string>
+        <string>Discord is an instant messaging and VoIP social platform which allows communication through voice calls, video calls, text messaging, and media and files. Communication can be private or take place in virtual communities called "servers"</string>
         <key>developer</key>
   			<string>%MUNKI_DEVELOPER%</string>
   			<key>category</key>

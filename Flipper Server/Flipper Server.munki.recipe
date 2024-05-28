@@ -3,31 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string></string>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of WhatsApp and imports it into Munki.</string>
+	<string>Downloads the latest version of Flipper Server and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.macsolution.seedstore.munki.WhatsApp</string>
+	<string>com.macsolution.seedstore.munki.FlipperServer</string>
 	<key>Input</key>
 	<dict>
+		<key>APP_FILENAME</key>
+		<string>Flipper</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>WhatsApp</string>
+		<string>Flipper Server</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>Communication</string>
 			<key>description</key>
-			<string>WhatsApp is an instant messaging and voice-over-IP service owned by technology conglomerate Meta. It allows users to send text, voice messages and video messages, make voice and video calls, and share images, documents, user locations, and other content.</string>
+			<string>Screen sharing to a remote computer.</string>
 			<key>developer</key>
-			<string>Facebook Inc.</string>
+			<string></string>
 			<key>display_name</key>
-			<string>WhatsApp</string>
+			<string>Flipper Server</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -35,11 +35,20 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.scriptingosx.download.WhatsApp</string>
+	<string>com.macsolution.seedstore.download.FlipperServer</string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
