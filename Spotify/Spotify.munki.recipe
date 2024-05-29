@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Spotify and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.macsolution.seedstore.munki.InstallSpotify</string>
+	<string>com.macsolution.seedstore.munki.Spotify</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.macsolution.seedstore.download.InstallSpotify</string>
+	<string>com.macsolution.seedstore.download.Spotify</string>
 	<key>Process</key>
 	<array>
 		<dict>
