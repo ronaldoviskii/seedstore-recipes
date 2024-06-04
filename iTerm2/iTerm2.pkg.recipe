@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of iTerm 2 and makes a package.</string>
 	<key>Identifier</key>
-	<string>io.github.hjuutilainen.pkg.iTerm2</string>
+	<string>com.macsolution.seedstore.pkg.iTerm2</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.3.1</string>
 	<key>ParentRecipe</key>
-	<string>io.github.hjuutilainen.download.iTerm2</string>
+	<string>com.macsolution.seedstore.download.iTerm2</string>
 	<key>Process</key>
 	<array>
 		<dict>
