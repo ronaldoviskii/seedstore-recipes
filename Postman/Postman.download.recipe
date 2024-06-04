@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of Postman.</string>
     <key>Identifier</key>
-    <string>ccom.macsolution.seedstore.download.postman</string>
+    <string>com.macsolution.seedstore.download.postman</string>
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_URL</key>
