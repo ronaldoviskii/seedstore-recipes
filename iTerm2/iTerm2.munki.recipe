@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the current release version of iTerm 2 and imports into Munki.</string>
+	<string>Downloads the latest version of iTerm2 and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.macsolution.seedstore.munki.iTerm2</string>
 	<key>Input</key>
@@ -20,6 +22,8 @@
 			</array>
 			<key>description</key>
 			<string>iTerm2 is a free and open-source terminal emulator for macOS, licensed under GPL-2.0-or-later. It was derived from and has mostly supplanted the earlier "iTerm" application.</string>
+			<key>developer</key>
+			<string>iTerm2</string>
 			<key>display_name</key>
 			<string>iTerm2</string>
 			<key>name</key>
@@ -28,23 +32,12 @@
 			<true/>
 		</dict>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.keeleysam.autopkg.download.iTerm2</string>
+	<string>com.macsolution.seedstore.download.iTerm2</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -55,10 +48,6 @@
 			</dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>MunkiPkginfoMerger</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
