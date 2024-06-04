@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Android Studio.</string>
+	<key>Identifier</key>
+	<string>com.macsolution.seedstore.download.AndroidStudio</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Android Studio</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>https://r5---sn-bg0s7n7s.gvt1.com/edgedl/android/studio/install/2023.3.1.18/android-studio-2023.3.1.18-mac.dmg?cms_redirect=yes&amp;mh=qd&amp;mip=186.193.232.31&amp;mm=28&amp;mn=sn-bg0s7n7s&amp;ms=nvh&amp;mt=1717531211&amp;mv=m&amp;mvi=5&amp;pl=20&amp;rmhost=r4---sn-bg0s7n7s.gvt1.com&amp;shardbypass=sd</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/Android Studio.app</string>
+				<key>requirement</key>
+				<string>identifier "com.google.android.studio" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = EQHXZ8M8AV</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/Android Studio.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+	</array>
+</dict>
+</plist>
