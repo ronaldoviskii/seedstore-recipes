@@ -2,30 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of iTerm2 and imports it into Munki.</string>
+	<string>Downloads the current release version of iTerm2 and imports into Munki.</string>
 	<key>Identifier</key>
 	<string>com.macsolution.seedstore.munki.iTerm2</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>iTerm2</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Tools</string>
+		<key>RELEASE</key>
+		<string>final</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
 			<string>iTerm2 is a free and open-source terminal emulator for macOS, licensed under GPL-2.0-or-later. It was derived from and has mostly supplanted the earlier "iTerm" application.</string>
 			<key>developer</key>
-			<string>iTerm2</string>
+			<string>George Nachman</string>
 			<key>display_name</key>
-			<string>iTerm2</string>
+			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -33,21 +37,25 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>2.3</string>
+	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.macsolution.seedstore.download.iTerm2</string>
+	<string>io.github.hjuutilainen.download.iTerm2</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiPkginfoMerger</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
