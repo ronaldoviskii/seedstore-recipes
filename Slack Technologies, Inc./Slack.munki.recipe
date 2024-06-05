@@ -11,7 +11,9 @@
 		<key>NAME</key>
 		<string>Slack</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Communication</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,11 +21,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Slack is a cloud-based team communication platform developed by Slack Technologies, which has been owned by Salesforce since 2020. Slack has freemium and paid subscriptions. Slack's primary userbase is businesses, and has functionalities primarily for businesses.</string>
+			<string>Slack is a new way to communicate with your team. It's faster, better organized, and more secure than email.</string>
 			<key>display_name</key>
 			<string>Slack</string>
 			<key>category</key>
-			<string>Communication</string>
+			<string>%MUNKI_CATEGORY%</string>
 			<key>developer</key>
 			<string>Slack</string>
 			<key>name</key>

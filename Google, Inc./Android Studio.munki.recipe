@@ -11,7 +11,9 @@
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Tools</string>
 		<key>NAME</key>
 		<string>Android Studio</string>
 		<key>pkginfo</key>
@@ -20,8 +22,12 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>icon_name</key>
+  			<string>AndroidStudio.png</string>
 			<key>description</key>
-			<string>Android development platform.</string>
+			<string>Android Studio is the official integrated development environment for Google's Android operating system, built on JetBrains' IntelliJ IDEA software and designed specifically for Android development. It is available for download on Windows, macOS and Linux based operating systems.</string>
 			<key>developer</key>
 			<string>Google LLC</string>
 			<key>display_name</key>

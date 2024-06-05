@@ -13,7 +13,9 @@
 		<key>APP_FILENAME</key>
 		<string>Google Chrome</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Browsers</string>
 		<key>NAME</key>
 		<string>Chrome</string>
 		<key>pkginfo</key>
@@ -22,8 +24,12 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>icon_name</key>
+  			<string>Chrome.png</string>
 			<key>description</key>
-			<string>Modern and fast Web browser.</string>
+			<string>Chrome is the official web browser from Google, built to be fast, secure, and customizable. Download now and make it yours.</string>
 			<key>developer</key>
 			<string>Google LLC</string>
 			<key>display_name</key>

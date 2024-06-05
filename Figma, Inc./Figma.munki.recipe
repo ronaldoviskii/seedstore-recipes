@@ -11,19 +11,23 @@
 		<key>NAME</key>
 		<string>Figma</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Tools</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>Applications</string>
 			<key>developer</key>
 			<string>Figma</string>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>icon_name</key>
+  			<string>Figma.png</string>
 			<key>description</key>
-			<string>Design, prototype, and gather feedback all in one place with Figma.</string>
+			<string>Figma is a collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows.</string>
 			<key>display_name</key>
 			<string>Figma</string>
 			<key>name</key>

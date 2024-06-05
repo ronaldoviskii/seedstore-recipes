@@ -18,7 +18,7 @@
       <key>NAME</key>
       <string>Discord</string>
       <key>MUNKI_REPO_SUBDIR</key>
-      <string>apps/%NAME%</string>
+      <string>apps/%MUNKI_CATEGORY%/%NAME%</string>
 
       <key>pkginfo</key>
       <dict>
@@ -27,7 +27,7 @@
           <string>testing</string>
         </array>
         <key>description</key>
-        <string>Discord is an instant messaging and VoIP social platform which allows communication through voice calls, video calls, text messaging, and media and files. Communication can be private or take place in virtual communities called "servers"</string>
+        <string>Discord is great for playing games and chilling with friends, or even building a worldwide community. Customize your own space to talk, play, and hang out.</string>
         <key>developer</key>
   			<string>%MUNKI_DEVELOPER%</string>
   			<key>category</key>

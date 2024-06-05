@@ -2,52 +2,52 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads latest version of Microsoft Visual Studio Code.</string>
+	<string>Downloads the latest version of Visual Studio Code.</string>
 	<key>Identifier</key>
-	<string>com.seedstore.whydah.download.Visual_Studio_Code</string>
+	<string>com.macsolution.seedstore.download.VisualStudioCode</string>
 	<key>Input</key>
 	<dict>
+		<key>APP_FILENAME</key>
+		<string>Visual Studio Code</string>
 		<key>NAME</key>
 		<string>Visual Studio Code</string>
-		<key>DOWNLOAD_URL</key>
-		<string>https://go.microsoft.com/fwlink/?LinkID=620882</string>
-		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-		<false/>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>2.3</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
-				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
+				<key>url</key>
+				<string>https://code.visualstudio.com/sha/download?build=stable&amp;os=darwin-universal</string>
 			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
@@ -55,6 +55,19 @@
 				<key>requirement</key>
 				<string>identifier "com.microsoft.VSCode" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
 			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Visual Studio Code.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
 		</dict>
 	</array>
 </dict>

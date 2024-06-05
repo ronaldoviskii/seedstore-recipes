@@ -11,7 +11,9 @@
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Communication</string>
 		<key>NAME</key>
 		<string>WhatsApp</string>
 		<key>pkginfo</key>
@@ -20,10 +22,14 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>icon_name</key>
+  			<string>WhatsApp.png</string>
 			<key>description</key>
 			<string>Quickly send and receive WhatsApp messages right from your computer.</string>
 			<key>developer</key>
-			<string>WhatsApp Inc.</string>
+			<string>WhatsApp LLC</string>
 			<key>display_name</key>
 			<string>WhatsApp</string>
 			<key>name</key>

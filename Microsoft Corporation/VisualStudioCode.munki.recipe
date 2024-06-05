@@ -5,17 +5,19 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Spotify and imports it into Munki.</string>
+	<string>Downloads the latest version of Code and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.macsolution.seedstore.munki.Spotify</string>
+	<string>com.macsolution.seedstore.munki.VisualStudioCode</string>
 	<key>Input</key>
 	<dict>
+		<key>APP_FILENAME</key>
+		<string>Visual Studio Code</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
-		<string>Multimedia</string>
+		<string>Tools</string>
 		<key>NAME</key>
-		<string>Spotify</string>
+		<string>Visual Studio Code</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -25,13 +27,13 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>icon_name</key>
-  			<string>Spotify.png</string>
+  			<string>VisualStudioCode.png</string>
 			<key>description</key>
-			<string>Spotify is a digital music service that gives you access to millions of songs.</string>
+			<string>Code combines the streamlined UI of a modern editor with rich code assistance and navigation, and an integrated debugging experience – without the need for a full IDE.</string>
 			<key>developer</key>
-			<string>Spotify</string>
+			<string>Microsoft Corporation</string>
 			<key>display_name</key>
-			<string>Spotify</string>
+			<string>Visual Studio Code</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -41,7 +43,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.macsolution.seedstore.download.Spotify</string>
+	<string>com.macsolution.seedstore.download.VisualStudioCode</string>
 	<key>Process</key>
 	<array>
 		<dict>
