@@ -3,20 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string></string>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of WhatsApp.</string>
 	<key>Identifier</key>
 	<string>com.macsolution.seedstore.download.WhatsApp</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://web.whatsapp.com/desktop/mac_native/release/?configuration=Release</string>
 		<key>NAME</key>
 		<string>WhatsApp</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>2.3</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -25,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<string>https://web.whatsapp.com/desktop/mac_native/release/?configuration=Release</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -48,11 +46,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
+				<key>input_plist_path</key>
+				<string>%pathname%/WhatsApp.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
 			</dict>
 			<key>Processor</key>
-			<string>AppDmgVersioner</string>
+			<string>Versioner</string>
 		</dict>
 	</array>
 </dict>
