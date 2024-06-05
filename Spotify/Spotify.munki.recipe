@@ -2,70 +2,70 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Downloads the latest Spotify and imports into Munki.
-
-For Apple Silicon set DOWNLOAD_ARCH to "ARM64" and SUPPORTED_ARCH to "arm64" (default)
-
-For Intel leave DOWNLOAD_ARCH empty and set SUPPORTED_ARCH to "x86_64"
-</string>
-    <key>Identifier</key>
-    <string>com.github.autopkg.munki.Spotify</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>Spotify</string>
-        <key>MUNKI_REPO_SUBDIR</key>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Spotify and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.macsolution.seedstore.munki.Spotify</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
 		<string>%MUNKI_CATEGORY%/%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Multimedia</string>
-        <key>pkginfo</key>
-        <dict>
-            <key>catalogs</key>
-            <array>
-                <string>testing</string>
-            </array>
+		<key>NAME</key>
+		<string>Spotify</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>icon_name</key>
   			<string>Spotify.png</string>
-            <key>description</key>
-            <string>Spotify is a digital music service that gives you access to millions of songs.</string>
-            <key>display_name</key>
-            <string>Spotify</string>
-            <key>name</key>
-            <string>%NAME%</string>
-            <key>postinstall_script</key>
-            <string>#!/bin/bash
-                # Add directory traversal for the entire application and ensure 
-                # all executables are executable by group and other
-                /bin/chmod -R go+rX /Applications/Spotify.app
-            </string>
-            <key>supported_architectures</key>
-            <array>
-                <string>x86_64</string>
-            </array>
-            <key>unattended_install</key>
-            <true/>
-        </dict>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>0.2.0</string>
-    <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.Spotify</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%pathname%</string>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
-        </dict>
-    </array>
+			<key>description</key>
+			<string>Spotify is a digital music service that gives you access to millions of songs.</string>
+			<key>developer</key>
+			<string>Spotify</string>
+			<key>display_name</key>
+			<string>Spotify</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.macsolution.seedstore.download.InstallSpotify</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%dmg_path%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
 </dict>
 </plist>
