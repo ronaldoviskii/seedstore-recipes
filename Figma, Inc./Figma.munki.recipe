@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Figma</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
+		<string>%MUNKI_CATEGORY%/%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Tools</string>
 		<key>pkginfo</key>
