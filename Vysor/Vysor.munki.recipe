@@ -22,6 +22,8 @@
             </array>
             <key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
+			<key>icon_name</key>
+  			<string>Vysor.jpeg</string>
             <key>description</key>
             <string>Vysor gives you the integration and ease of an emulator on a physical device. Vysor Share. Share your device, across the office, or across the globe.</string>
             <key>developer</key>

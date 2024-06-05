@@ -2,18 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest Slack and imports into Munki.</string>
+	<string>Downloads the latest version of iMazing and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.macsolution.seedstore.munki.slack</string>
+	<string>com.macsolution.seedstore.munki.iMazing</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>Slack</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%MUNKI_CATEGORY%/%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
-		<string>Communication</string>
+		<string>Tools</string>
+		<key>NAME</key>
+		<string>iMazing</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -23,13 +25,13 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>icon_name</key>
-  			<string>Slack.png</string>
+  			<string>iMazing.png</string>
 			<key>description</key>
-			<string>Slack is a new way to communicate with your team. It's faster, better organized, and more secure than email.</string>
-			<key>display_name</key>
-			<string>Slack</string>
+			<string>iMazing Profile Editor is a free app to easily define settings for deployment on Apple devices.</string>
 			<key>developer</key>
-			<string>Slack</string>
+			<string>DigiDNA SARL</string>
+			<key>display_name</key>
+			<string>iMazing</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -37,20 +39,18 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.macsolution.seedstore.download.slack</string>
+	<string>com.macsolution.seedstore.download.iMazing</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
+				<string>%pathname%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
-				<key>version_comparison_key</key>
-				<string>CFBundleShortVersionString</string>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
