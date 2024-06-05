@@ -9,11 +9,11 @@
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_URL</key>
-        <string>https://dl.pstmn.io/download/latest/osx_arm64</string>
+        <string>https://dl.pstmn.io/download/latest/osx_64</string>
         <key>NAME</key>
         <string>Postman</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://dl.pstmn.io/download/latest/osx_arm64</string>        
+        <string>https://dl.pstmn.io/download/latest/osx_64</string>        
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
